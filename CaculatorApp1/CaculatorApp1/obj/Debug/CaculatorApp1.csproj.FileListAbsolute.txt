@@ -1,0 +1,10 @@
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\bin\Debug\CaculatorApp1.exe.config
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\bin\Debug\CaculatorApp1.exe
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\bin\Debug\CaculatorApp1.pdb
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.csprojAssemblyReference.cache
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.Form1.resources
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.Properties.Resources.resources
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.csproj.GenerateResource.cache
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.csproj.CoreCompileInputs.cache
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.exe
+D:\391-WHU\C#\C#prj\CaculatorApp1\CaculatorApp1\obj\Debug\CaculatorApp1.pdb

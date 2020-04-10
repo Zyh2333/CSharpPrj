@@ -74,8 +74,8 @@ namespace Homework5
             program.show(query3);
             //查询订单明细
             Console.WriteLine("查询订单1的明细：");
-            Console.WriteLine(client1.GetOrder().orderItem1);
-            Console.WriteLine(client1.GetOrder().orderItem2);
+            Console.WriteLine(client1.GetOrder().items[0]);
+            Console.WriteLine(client1.GetOrder().items[1]);
             //更新订单日期
             Console.WriteLine("更新订单日期");
             try

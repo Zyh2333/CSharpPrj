@@ -9,17 +9,19 @@ namespace Homework5
     //主要包含订单的商品明细
     public class OrderItem
     {
-        //订单明细编号
-        private int goodNum;
-        private int itemNum;
-        private int num;
-        private double money;
+        //订单明细
+        public int goodNum { get; set; }
+        //购买数量
+        public int num { get; set; }
+        //明细项金额
+        public double money { get; set; }
         public OrderItem() { }
-        public OrderItem(int num,int itemNum)
+        //该买数量和商品编号添加订单明细
+        public OrderItem(int num,int goodNum)
         {
-            this.itemNum = itemNum;
+            this.goodNum = goodNum;
             this.num = num;
-            if (itemNum == 1)
+            if (goodNum == 1)
             {
                 this.money = num * Good.getMoney1();
             }
@@ -27,21 +29,20 @@ namespace Homework5
             {
                 this.money = num * Good.getMoney2();
             }
-            this.goodNum = itemNum;
         }
         //根据明细号判断明细是否重复
         public override bool Equals(object obj)
         {
             OrderItem orderItem = obj as OrderItem;
-            return orderItem != null && this.itemNum == orderItem.itemNum;
+            return orderItem != null && this.goodNum == orderItem.goodNum;
         }
         public override int GetHashCode()
         {
-            return this.itemNum;
+            return this.goodNum;
         }
         public override string ToString()
         {
-            return ($"当前明细编号:{itemNum},商品编号{this.goodNum}数量为{num},金额为{money}");
+            return ($"商品编号{this.goodNum}数量为{num},金额为{money}");
         }
     }
 }

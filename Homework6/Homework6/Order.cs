@@ -10,24 +10,24 @@ namespace Homework5
     [Serializable]
     public class Order
     {
-        public OrderItem orderItem1;
-        public OrderItem orderItem2;
+        public List<OrderItem> items{ get; set; }
         //订单号
         public int orderNum { set; get; }
         //客户名字
-        public string client;
+        public string client { set; get; }
         //客户订单日期,用整数代替某天
         public int date { set; get; }
         //订单金额
-        public double money = 0;
+        public double money { set; get; }
         //初始化订单并添加到list中
         public Order(String clientName,int num1,int num2,int date,int orderNum)
         {
             {                         
                 this.client = clientName;
                 this.money = num1 * Good.getMoney1() + num2 * Good.getMoney2();
-                this.orderItem1 = new OrderItem(num1,1);
-                this.orderItem2 = new OrderItem(num2,2);
+                items = new List<OrderItem>();
+                this.items.Add(new OrderItem(num1,Good.getGoodNum1()));
+                this.items.Add(new OrderItem(num2,Good.getGoodNum2()));
                 this.date = date;
                 this.orderNum = orderNum;
             }

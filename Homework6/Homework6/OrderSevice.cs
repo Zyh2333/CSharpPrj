@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
+
 namespace Homework5
 {
     public class OrderSevice
     {
         public List<Order> orders = new List<Order>();
+        //添加订单进入订单列表
         public void addOrder(Order order)
         {
             bool can = true;
@@ -30,7 +32,7 @@ namespace Homework5
                 throw new RepeatException();
             }
         }
-        //通过订单号用LINQ语句查询
+        //通过订单号用LINQ语句查询订单
         public IEnumerable<Order> findOrderByNum(int number)
         {
             var result = orders.Where(o => o.orderNum.Equals(number));
@@ -93,6 +95,7 @@ namespace Homework5
                xmlSerializer.Serialize(fs, ordersArray);
             }
         }
+        //反序列化
         public Order[] import()
         {
             Order[] orderArray = null;

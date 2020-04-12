@@ -22,8 +22,6 @@ namespace Homework8
             searchComboBox.Items.Add("按订单号查询");
             searchComboBox.Items.Add("按日期查询");
             searchComboBox.Items.Add("按客户名查询");
-            //this.dataGridView2.DataSource = orderSevice.orders;
-            //this.dataGridView2.DataMember = "items";
         }
         private void createClient_Click(object sender, EventArgs e)
         {
@@ -43,6 +41,7 @@ namespace Homework8
         private void addOrderEvent(Order order)
         {
             orderSevice.addOrder(order);
+            orderBindingSource.ResetBindings(false);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -68,6 +67,7 @@ namespace Homework8
             Order[] importOrders = orderSevice.import();
             for (int i = 0; i < importOrders.Length; i++) {
                 orderSevice.addOrder(importOrders[i]);
+                orderBindingSource.ResetBindings(false);
             }
         }
 
@@ -79,11 +79,13 @@ namespace Homework8
         private void update_Click(object sender, EventArgs e)
         {
             orderSevice.update(int.Parse(numUpdate.Text), int.Parse(dateUpdate.Text));
+            orderBindingSource.ResetBindings(false);
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
             orderSevice.delete(int.Parse(numDelete.Text));
+            orderBindingSource.ResetBindings(false);
         }
     }
 }
